@@ -10,32 +10,44 @@
     <h1>PRACTICE SET</h1>
 
     <script>
-        alert("hi");
-        let arr = [1,2,3,4,5];
-        arr.forEach(function(elem,index){
-            elem+=100;
-            console.log(`current element is ${elem} and the index is ${index}`)
-        });
-        console.log(arr);
+        // alert("hi");
+        // let arr = [1,2,3,4,5];
+        // arr.forEach(function(elem,index){
+        //     elem+=100;
+        //     console.log(`current element is ${elem} and the index is ${index}`)
+        // });
+        // console.log(arr);
         
-        for(items of arr){
-            items+=500;
-            console.log(`using for of loop ${items}`)
-        };
-        console.log(arr);
-        let strin = "vivek";
-        for(s of "vivek singh rajput"){
-            console.log(s);
-        }
+        // for(items of arr){
+        //     items+=500;
+        //     console.log(`using for of loop ${items}`)
+        // };
+        // console.log(arr);
+        // let strin = "vivek";
+        // for(s of "vivek singh rajput"){
+        //     console.log(s);
+        // }
 
-        let obj = {
-            name:"vivek singh rajput",
-            roll : 59,
-            age : 23
-        }
-        for(it in obj){
-            console.log(`the key is ${it} and it value is ${obj[it]}`);
-        }
+        // let obj = {
+        //     name:"vivek singh rajput",
+        //     roll : 59,
+        //     age : 23
+        // }
+        // for(it in obj){
+        //     console.log(`the key is ${it} and it value is ${obj[it]}`);
+        // }
+        let b1 = [1,2,3,4,5,6];
+        let [s,,k,,z] = b1;
+        console.log(`the element is new ${s}`);
+        console.log(`the element is new ${z}`);
+        console.log(`the element is new ${k}`);
+        let[a,b,c,d,e,f] = b1;
+        console.log(`the element is ${a}`);
+        console.log(`the element is ${b}`);
+        console.log(`the element is ${c}`);
+        console.log(`the element is ${d}`);
+        console.log(`the element is ${e}`);
+        console.log(`the element is ${f}`);
 
     </script>
 </body>
