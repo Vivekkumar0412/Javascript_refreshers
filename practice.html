@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PRACTICE SET</h1>
+
+    <script>
+        alert("hi");
+        let arr = [1,2,3,4,5];
+        arr.forEach(function(elem,index){
+            elem+=100;
+            console.log(`current element is ${elem} and the index is ${index}`)
+        });
+        console.log(arr);
+        
+        for(items of arr){
+            items+=500;
+            console.log(`using for of loop ${items}`)
+        };
+        console.log(arr);
+        let strin = "vivek";
+        for(s of "vivek singh rajput"){
+            console.log(s);
+        }
+
+        let obj = {
+            name:"vivek singh rajput",
+            roll : 59,
+            age : 23
+        }
+        for(it in obj){
+            console.log(`the key is ${it} and it value is ${obj[it]}`);
+        }
+
+    </script>
+</body>
+</html>
