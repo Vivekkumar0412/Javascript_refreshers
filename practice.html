@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>PRACTICE SET</h1>
 
@@ -17,7 +19,7 @@
         //     console.log(`current element is ${elem} and the index is ${index}`)
         // });
         // console.log(arr);
-        
+
         // for(items of arr){
         //     items+=500;
         //     console.log(`using for of loop ${items}`)
@@ -50,18 +52,18 @@
         // console.log(`the element is ${f}`);
 
         let obj = {
-            name:"vivek",
-            roll:59,
-            salary:15000000,
-            fun:{
-                h:"hi",
-                j:"j"
+            name: "vivek",
+            roll: 59,
+            salary: 15000000,
+            fun: {
+                h: "hi",
+                j: "j"
             },
-            call : function(){
+            call: function () {
                 console.log("ji there")
             }
         };
-        let {name,roll,salary,fun,call} = obj;
+        let { name, roll, salary, fun, call } = obj;
         console.log(name);
         console.log(roll);
         console.log(salary);
@@ -69,39 +71,49 @@
         console.log(call());
 
 
-        let s = (...a)=>{
+        let s = (...a) => {
             console.log(a);
             console.log(...a);
-            for(let i of a){
-                i+=i;
+            for (let i of a) {
+                i += i;
                 console.log(i);
             }
             // console.log(i);
         };
-        s(1,2,3);
+        s(1, 2, 3);
 
-        let data = (a,b,...c)=>{
+        let data = (a, b, ...c) => {
             console.log(`${a} and ${b}`);
             console.log(c);
             console.log(...c);
         };
-        data("vivek","chotu","veer","divya","singh","bindi");
+        data("vivek", "chotu", "veer", "divya", "singh", "bindi");
 
-        function car (a,b,c){
+        function car(a, b, c) {
             console.log(`spread operator ${a}`);
             console.log(`spread operator ${b}`);
             console.log(`spread operator ${c}`);
-            console.log(a+b+c);
+            console.log(a + b + c);
         };
-        let ar = [5,7,8];
-        let arw = [3,45,89];
-        ar = [...ar,...arw];
+        let ar = [5, 7, 8];
+        let arw = [3, 45, 89];
+        ar = [...ar, ...arw];
         console.log(ar);
         car(...ar);
 
-        let cr = [...ar,...arw,99,59];
+        let cr = [...ar, ...arw, 99, 59];
         console.log(cr);
-        
+
+        // DO NOT ALTER THE FOLLOWING CODE:
+        const fullNames = [{ first: 'Albus', last: 'Dumbledore' }, { first: 'Harry', last: 'Potter' }, { first: 'Hermione', last: 'Granger' }, { first: 'Ron', last: 'Weasley' }, { first: 'Rubeus', last: 'Hagrid' }, { first: 'Minerva', last: 'McGonagall' }, { first: 'Severus', last: 'Snape' }];
+
+        // Write your code here
+        const firstNames = fullNames.map(function (fn) {
+            return fn.first;
+        })
+        console.log(firstNames);
+
     </script>
 </body>
+
 </html>
