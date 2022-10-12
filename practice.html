@@ -67,6 +67,18 @@
         console.log(salary);
         console.log(fun.h);
         console.log(call());
+
+
+        let s = (...a)=>{
+            console.log(a);
+            console.log(...a);
+            for(let i of a){
+                i+=i;
+                console.log(i);
+            }
+            // console.log(i);
+        };
+        s(1,2,3);
         
     </script>
 </body>
