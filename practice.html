@@ -118,6 +118,15 @@
         console.log(Number.isInteger(n))
         console.log(Math.sign(n));
 
+        const si = (...b)=>{
+            let sum = 0;
+            for(let i of b){
+                sum+=i;
+            }
+            console.log(`ye rest paramerte ka hai ${sum}`);
+        }
+        si(1,2,3,4,5);
+
     </script>
 </body>
 
