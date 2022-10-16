@@ -152,11 +152,18 @@
             this.firstName = name;
             this.lastName = lanme;
             this.age = age;
+            this.all = function(){
+                console.log(`hi there my name is ${this.firstName} ${this.lastName} and my age is ${this.age}`);
+            }
         };
 
         let person1 = new Person("vivek","kumar",23);
         // alert(person1);
-        console.log(l.hasOnwProperty('age'));
+        console.log(person1);
+        console.log(person1.all());
+        // console.log(l);
+        // console.log(l.hasOwnProperty('age'));
+        // hasOwnProperty()
 
     </script>
 </body>
