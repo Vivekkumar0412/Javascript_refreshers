@@ -141,10 +141,21 @@
             name:"v",
             fu:"k",
             fullname(){
-                alert(`${this.name} and ${this.fu}`);
+                // alert(`${this.name} and ${this.fu}`);
             }
         };
         l.fullname();
+
+        // constructor function
+
+        function Person(name,lanme,age){
+            this.firstName = name;
+            this.lastName = lanme;
+            this.age = age;
+        };
+
+        let person1 = new Person("vivek","kumar",23);
+        alert(person1);
 
     </script>
 </body>
