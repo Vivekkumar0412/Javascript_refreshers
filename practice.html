@@ -112,23 +112,23 @@
             return fn.first;
         })
         console.log(firstNames);
-        let n= 0;
+        let n = 0;
         console.log(isFinite(n));
         console.log(Number.isFinite(n));
         console.log(Number.isInteger(n))
         console.log(Math.sign(n));
 
-        const si = (...b)=>{
+        const si = (...b) => {
             let sum = 0;
-            for(let i of b){
-                sum+=i;
+            for (let i of b) {
+                sum += i;
             }
             console.log(`ye rest paramerte ka hai ${sum}`);
         }
-        si(1,2,3,4,5);
+        si(1, 2, 3, 4, 5);
 
-        class biodta{
-            callname(){
+        class biodta {
+            callname() {
                 console.log("hi there its uisng a classs");
             }
         };
@@ -137,10 +137,10 @@
         st1.callname();
         document.write("1.5 cr ka pakage lag gaya mera!");
 
-        let l ={
-            name:"v",
-            fu:"k",
-            fullname(){
+        let l = {
+            name: "v",
+            fu: "k",
+            fullname() {
                 // alert(`${this.name} and ${this.fu}`);
             }
         };
@@ -148,16 +148,16 @@
 
         // constructor function
 
-        function Person(name,lanme,age){
+        function Person(name, lanme, age) {
             this.firstName = name;
             this.lastName = lanme;
             this.age = age;
-            this.all = function(){
-                console.log(`hi there my name is ${this.firstName} ${this.lastName} and my age is ${this.age}`);
-            }
         };
+        Person.prototype.all = function () {
+            console.log(`hi there my name is ${this.firstName} ${this.lastName} and my age is ${this.age}`);
+        }
 
-        let person1 = new Person("vivek","kumar",23);
+        let person1 = new Person("vivek", "kumar", 23);
         // alert(person1);
         console.log(person1);
         console.log(person1.all());
