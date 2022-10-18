@@ -286,6 +286,27 @@
         console.log(grand);
         grand.h();
 
+
+        // public and private propertis and methods
+
+        class priv{
+            #name = "";
+            constructor(n){
+                this.#name = n;
+            }
+
+            #callname(){
+                console.log(this.#name);
+            }
+
+            calln2(){
+                this.#callname();
+            }
+        };
+        let em1 = new priv("vivek");
+        em1.calln2();
+        // console.log(em1.#name);
+
         
 
     </script>
