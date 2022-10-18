@@ -12,6 +12,11 @@
     <h1>PRACTICE SET</h1>
 
     <script>
+        // let h = document.getElementsByTagName("h1");
+        // h.addEventListener('click',cll);
+        // function cll(){
+        //     alert("hi");
+        // }
         // alert("hi");
         // let arr = [1,2,3,4,5];
         // arr.forEach(function(elem,index){
@@ -189,6 +194,25 @@
         let human1 = new Human("vivek",23,"Billanoare");
         console.log(human1.p());
         console.log(human1);
+
+
+
+        class check{
+            constructor(name,age,salary){
+                this.name = name;
+                this.myAge = age;
+                this.salary = salary;
+            };
+            sayhi(){
+                console.log(`my name is ${this.name} i am ${this.myAge} and i earn ${this.salary}`)
+            }
+        };
+
+        let ch = new check("vivek singh rajput",23,15000000);
+        let c1h = new check();
+        let ch2 = new check();
+        console.log(ch);
+        ch.sayhi();
     </script>
 </body>
 
