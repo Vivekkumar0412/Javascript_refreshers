@@ -254,6 +254,9 @@
                 this.age = age;
                 this.hobby = hobby;
             }
+            par(){
+                console.log("hi there parent hai hm...")
+            }
         };
 
         class child extends parent{
@@ -264,13 +267,26 @@
             }
 
             callf(){
+                super.par();
                 console.log(`my name is ${this.name} my age is ${this.age} and my salary is ${this.salary} and department is ${this.department} and my hobby is ${this.hobby}`)
             }
         };
 
+        class grandchild extends child{
+            h(){
+                super.callf();
+            }
+        }
+
         let firstem = new child("vivek",23,"making money",15000000,"SDE");
         console.log(firstem);
         firstem.callf();
+
+        let grand  = new grandchild("vivek singh rajput",23,"talking bussiness",19000000,"SDE 2");
+        console.log(grand);
+        grand.h();
+
+        
 
     </script>
 </body>
