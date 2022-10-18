@@ -167,6 +167,9 @@
 
 
         // prototypal inheritance.
+        function Animal(max_age){
+            this.max_age = max_age;
+        };
 
         function Human(name,age,habit){
             this.name = name;
@@ -174,15 +177,17 @@
             this.habit = habit;
         };
 
-        function Animal(breathe){
-            this.breathe = breathe;
-        };
+        Animal.prototype.p = function(){
+            console.log("breathing.......")
+        }
 
         Human.prototype.all = function(){
             console.log(`my name is ${this.name} and i am ${this.age} years old my habit is ${this.habit}`);
         };
+        Human.prototype.__proto__ = Animal.prototype;
 
         let human1 = new Human("vivek",23,"Billanoare");
+        console.log(human1.p());
         console.log(human1);
     </script>
 </body>
