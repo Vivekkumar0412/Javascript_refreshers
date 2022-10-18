@@ -172,43 +172,45 @@
 
 
         // prototypal inheritance.
-        function Animal(max_age){
+        function Animal(max_age) {
             this.max_age = max_age;
         };
 
-        function Human(name,age,habit){
+        function Human(name, age, habit) {
             this.name = name;
             this.age = age;
             this.habit = habit;
         };
 
-        Animal.prototype.p = function(){
+        Animal.prototype.p = function () {
             console.log("breathing.......")
         }
 
-        Human.prototype.all = function(){
+        Human.prototype.all = function () {
             console.log(`my name is ${this.name} and i am ${this.age} years old my habit is ${this.habit}`);
         };
         Human.prototype.__proto__ = Animal.prototype;
 
-        let human1 = new Human("vivek",23,"Billanoare");
+        let human1 = new Human("vivek", 23, "Billanoare");
         console.log(human1.p());
         console.log(human1);
 
 
+        // class and object in details.
+        // constructor function automatically call its elf as soon as we define an object and it is also used to add properties to the class.
 
-        class check{
-            constructor(name,age,salary){
+        class check {
+            constructor(name, age, salary) {
                 this.name = name;
                 this.myAge = age;
                 this.salary = salary;
             };
-            sayhi(){
+            sayhi() {
                 console.log(`my name is ${this.name} i am ${this.myAge} and i earn ${this.salary}`)
             }
         };
 
-        let ch = new check("vivek singh rajput",23,15000000);
+        let ch = new check("vivek singh rajput", 23, 15000000);
         let c1h = new check();
         let ch2 = new check();
         console.log(ch);
