@@ -220,18 +220,58 @@
         // inheritance in class
         // basically when we use inheritance in class we use extends keyword in order to fetch data from a class we want
 
-        class emp{
-            constructor(){
-                console.log("inheritance wala constructor....")
+        class emp {
+            constructor(n) {
+                this.name = n;
+            }
+            na() {
+                console.log(this.name);
+            }
+            static ba() {
+                console.log("hhkhkhhhhkhkhkhhjbdc,bd,cbcd")
             }
         };
 
-        class manager extends emp{
-
+        class manager extends emp {
+                constructor(n, m) {
+                super(n)
+                console.log(this.m);
+            }
         };
 
-        let mng1 = new manager();
-        
+        let emp1 = new emp("vivek");
+        let mng1 = new manager("rajput", "15000000");
+        console.log(emp1);
+        console.log(mng1);
+        mng1.na();
+        manager.ba();
+
+        // what if both have the constructor
+
+        class parent{
+            constructor(name,age,hobby){
+                this.name = name;
+                this.age = age;
+                this.hobby = hobby;
+            }
+        };
+
+        class child extends parent{
+            constructor(nam,ag,hobby,salary,department){
+                super(nam,ag,hobby);
+                this.salary = salary;
+                this.department = department;
+            }
+
+            callf(){
+                console.log(`my name is ${this.name} my age is ${this.age} and my salary is ${this.salary} and department is ${this.department} and my hobby is ${this.hobby}`)
+            }
+        };
+
+        let firstem = new child("vivek",23,"making money",15000000,"SDE");
+        console.log(firstem);
+        firstem.callf();
+
     </script>
 </body>
 
