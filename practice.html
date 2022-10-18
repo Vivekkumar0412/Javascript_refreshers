@@ -161,10 +161,29 @@
         // alert(person1);
         console.log(person1);
         console.log(person1.all());
-        // console.log(l);
-        // console.log(l.hasOwnProperty('age'));
+        console.log(l);
+        console.log(l.hasOwnProperty('age'));
         // hasOwnProperty()
 
+
+        // prototypal inheritance.
+
+        function Human(name,age,habit){
+            this.name = name;
+            this.age = age;
+            this.habit = habit;
+        };
+
+        function Animal(breathe){
+            this.breathe = breathe;
+        };
+
+        Human.prototype.all = function(){
+            console.log(`my name is ${this.name} and i am ${this.age} years old my habit is ${this.habit}`);
+        };
+
+        let human1 = new Human("vivek",23,"Billanoare");
+        console.log(human1);
     </script>
 </body>
 
