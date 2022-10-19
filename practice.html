@@ -6,10 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1{
+            color: red;
+            margin-left: 100px;
+        }
+        h1::after{
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            background-color: aqua;
+            background: linear-gradient(pink,purple);
+            height: 100vh;
+            width: 40px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>PRACTICE SET</h1>
+    <h1>live server working.......</h1>
 
     <script>
         // let h = document.getElementsByTagName("h1");
@@ -324,6 +342,8 @@
             console.log(elem);
         };
         console.log(ar2);
+
+        document.cookie = "vivek = billionare,multimillonare; expires = sat, 22 oct 2022 12:00:00 UTC";
 
         
 
