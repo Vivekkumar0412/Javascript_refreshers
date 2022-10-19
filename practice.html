@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
         h1{
             color: red;
             margin-left: 100px;
@@ -21,6 +26,18 @@
             background: linear-gradient(pink,purple);
             height: 100vh;
             width: 40px;
+        }
+        h1::after{
+            content: " ";
+            display: block;
+            position: absolute;
+            /* top: 180px; */
+            top: 30px;
+            left: 30px;
+            background-color: aqua;
+            background: linear-gradient(pink,purple,pink);
+            height: 200px;
+            width: 30px;
         }
     </style>
 </head>
@@ -343,7 +360,10 @@
         };
         console.log(ar2);
 
-        document.cookie = "vivek = billionare,multimillonare; expires = sat, 22 oct 2022 12:00:00 UTC";
+        document.cookie = "vivek = billionare,multimillonare; expires = tue, 18 oct 2022 12:00:00 UTC";
+
+        let x = document.cookie;
+        // alert(x);
 
         
 
