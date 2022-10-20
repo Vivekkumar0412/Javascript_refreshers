@@ -376,7 +376,45 @@
         // console.log(sessionStorage.getItem("vivek"));
         // sessionStorage.removeItem("vivek");
 
-        
+        // json in js
+
+        let dat = `{
+    "name":"vivek singh rajput",
+    "age":23,
+    "roll_no":18001003059,
+    "is_student": true,
+    "passport_no": null,
+    "language": ["c","c++","python","js"],
+    "address":{
+        "state":"Bihar",
+        "district":"Gaya",
+        "pin code": 823004
+    }
+}
+`;
+
+let data2 = `{
+    "students": [
+        {
+            "name": "vivek",
+            "age": 23
+        },
+        {
+            "name": "pranav",
+            "age": 24
+        },
+        {
+            "name": "sunil",
+            "age": 25
+        }
+    ]
+}`;
+
+let ob2 = JSON.parse(data2);
+console.log(`name of the student is ${ob2["students"][0]["name"]} and its age is ${ob2["students"][0]["age"]}`)
+
+let obdat = JSON.parse(dat);
+console.log(obdat["name"],obdat["roll_no"],obdat["language"][3],obdat["address"]["state"]);
 
     </script>
 </body>

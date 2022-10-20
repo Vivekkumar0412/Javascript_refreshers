@@ -1,0 +1,13 @@
+{
+    "name":"vivek singh rajput",
+    "age":23,
+    "roll_no":18001003059,
+    "is_student": true,
+    "passport_no": null,
+    "language": ["c","c++","python","js"],
+    "address":{
+        "state":"Bihar",
+        "district":"Gaya",
+        "pin code": 823004
+    }
+}
