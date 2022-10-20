@@ -11,7 +11,7 @@
             margin: 0px;
             padding: 0px;
             overflow: hidden;
-            background-color: black;
+            background-color: greenyellow;
         }
         h1{
             color: red;
@@ -419,13 +419,27 @@ console.log(obdat["name"],obdat["roll_no"],obdat["language"][3],obdat["address"]
 
 // setTimeout function
 
-setTimeout(()=>{
-    alert("setTimeout function here....")
-},3000);
+// setTimeout(()=>{
+//     alert("setTimeout function here....")
+// },3000);
 
-setInterval(()=>{
-    alert("hihihhihiih")
-},3000);
+// setInterval(()=>{
+//     alert("hihihhihiih")
+// },3000);
+
+let fun2=()=>{
+    setTimeout(()=>{
+        console.log("function 2...exectuing....")
+    },3000);
+}
+
+let fun1 = ()=>{
+    console.log("function first starting.....");
+    fun2();
+    console.log("function 1 ending/......");
+};
+
+fun1();
 
     </script>
 </body>
