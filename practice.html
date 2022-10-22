@@ -11,10 +11,10 @@
             margin: 0px;
             padding: 0px;
             overflow: hidden;
-            background-color: greenyellow;
+            background: linear-gradient(to right,pink,rgb(243, 98, 243),pink)
         }
         h1{
-            color: red;
+            /* color: red; */
             margin-left: 100px;
         }
         h1::after{
@@ -39,13 +39,19 @@
             background: linear-gradient(pink,purple,pink);
             height: 200px;
             width: 30px;
+        }#h{
+            -webkit-text-stroke: 1px solid black;
+            -webkit-background-clip: text;
+            /* color: white; */
+            font-size: 100px;
+            /* background-position: 0 0; */
         }
     </style>
 </head>
 
 <body>
     <h1>PRACTICE SET</h1>
-    <h1>live server working.......</h1>
+    <h1 id="h">1.5 cr ka pakage lag gaya mera!</h1>
 
     <script>
         // let h = document.getElementsByTagName("h1");
@@ -176,7 +182,7 @@
 
         let st1 = new biodta();
         st1.callname();
-        document.write("1.5 cr ka pakage lag gaya mera!");
+        // document.write("");
 
         let l = {
             name: "v",
