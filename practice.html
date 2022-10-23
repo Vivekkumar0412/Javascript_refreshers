@@ -7,28 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
             overflow: hidden;
-            background: linear-gradient(to right,pink,rgb(243, 98, 243),pink)
+            background: linear-gradient(to right, pink, rgb(243, 98, 243), pink)
         }
-        h1{
+
+        h1 {
             /* color: red; */
             margin-left: 100px;
         }
-        h1::after{
+
+        h1::after {
             content: " ";
             display: block;
             position: absolute;
             top: 30px;
             left: 40px;
             background-color: aqua;
-            background: linear-gradient(pink,purple);
+            background: linear-gradient(pink, purple);
             height: 100vh;
             width: 40px;
         }
-        h1::after{
+
+        h1::after {
             content: " ";
             display: block;
             position: absolute;
@@ -36,10 +39,12 @@
             top: 30px;
             left: 30px;
             background-color: aqua;
-            background: linear-gradient(pink,purple,pink);
+            background: linear-gradient(pink, purple, pink);
             height: 200px;
             width: 30px;
-        }#h{
+        }
+
+        #h {
             -webkit-text-stroke: 1px solid black;
             -webkit-background-clip: text;
             /* color: white; */
@@ -275,7 +280,7 @@
         };
 
         class manager extends emp {
-                constructor(n, m) {
+            constructor(n, m) {
                 super(n)
                 console.log(this.m);
             }
@@ -290,58 +295,58 @@
 
         // what if both have the constructor
 
-        class parent{
-            constructor(name,age,hobby){
+        class parent {
+            constructor(name, age, hobby) {
                 this.name = name;
                 this.age = age;
                 this.hobby = hobby;
             }
-            par(){
+            par() {
                 console.log("hi there parent hai hm...")
             }
         };
 
-        class child extends parent{
-            constructor(nam,ag,hobby,salary,department){
-                super(nam,ag,hobby);
+        class child extends parent {
+            constructor(nam, ag, hobby, salary, department) {
+                super(nam, ag, hobby);
                 this.salary = salary;
                 this.department = department;
             }
 
-            callf(){
+            callf() {
                 super.par();
                 console.log(`my name is ${this.name} my age is ${this.age} and my salary is ${this.salary} and department is ${this.department} and my hobby is ${this.hobby}`)
             }
         };
 
-        class grandchild extends child{
-            h(){
+        class grandchild extends child {
+            h() {
                 super.callf();
             }
         }
 
-        let firstem = new child("vivek",23,"making money",15000000,"SDE");
+        let firstem = new child("vivek", 23, "making money", 15000000, "SDE");
         console.log(firstem);
         firstem.callf();
 
-        let grand  = new grandchild("vivek singh rajput",23,"talking bussiness",19000000,"SDE 2");
+        let grand = new grandchild("vivek singh rajput", 23, "talking bussiness", 19000000, "SDE 2");
         console.log(grand);
         grand.h();
 
 
         // public and private propertis and methods
 
-        class priv{
+        class priv {
             #name = "";
-            constructor(n){
+            constructor(n) {
                 this.#name = n;
             }
 
-            #callname(){
+            #callname() {
                 console.log(this.#name);
             }
 
-            calln2(){
+            calln2() {
                 this.#callname();
             }
         };
@@ -351,18 +356,18 @@
 
         // fat arrrow function
 
-        let sum = (a,b)=>{
-            return a+b;
+        let sum = (a, b) => {
+            return a + b;
         }
-        let ar2 =[];
+        let ar2 = [];
         console.log(ar2);
-        let ar1 = [2,3,4,5,6];
-        for(let elem of ar1){
-            elem = elem*2;
+        let ar1 = [2, 3, 4, 5, 6];
+        for (let elem of ar1) {
+            elem = elem * 2;
             ar2.push(elem);
         }
 
-        for(let elem of ar2){
+        for (let elem of ar2) {
             console.log(elem);
         };
         console.log(ar2);
@@ -374,7 +379,7 @@
         console.log(Math.random());
 
         // local storage
-        localStorage.setItem("vivek","Billionare");
+        localStorage.setItem("vivek", "Billionare");
         let na = localStorage.getItem("vivek");
         console.log(na);
         // console.log(localStorage.getItem("vivek"));
@@ -401,7 +406,7 @@
 }
 `;
 
-let data2 = `{
+        let data2 = `{
     "students": [
         {
             "name": "vivek",
@@ -418,35 +423,50 @@ let data2 = `{
     ]
 }`;
 
-let ob2 = JSON.parse(data2);
-console.log(`name of the student is ${ob2["students"][0]["name"]} and its age is ${ob2["students"][0]["age"]}`)
+        let ob2 = JSON.parse(data2);
+        console.log(`name of the student is ${ob2["students"][0]["name"]} and its age is ${ob2["students"][0]["age"]}`)
 
-let obdat = JSON.parse(dat);
-console.log(obdat["name"],obdat["roll_no"],obdat["language"][3],obdat["address"]["state"]);
+        let obdat = JSON.parse(dat);
+        console.log(obdat["name"], obdat["roll_no"], obdat["language"][3], obdat["address"]["state"]);
 
-// setTimeout function
+        // setTimeout function
 
-// setTimeout(()=>{
-//     alert("setTimeout function here....")
-// },3000);
+        // setTimeout(()=>{
+        //     alert("setTimeout function here....")
+        // },3000);
 
-// setInterval(()=>{
-//     alert("hihihhihiih")
-// },3000);
+        // setInterval(()=>{
+        //     alert("hihihhihiih")
+        // },3000);
 
-let fun2=()=>{
-    setTimeout(()=>{
-        console.log("function 2...exectuing....")
-    },3000);
-}
+        let fun2 = () => {
+            setTimeout(() => {
+                console.log("function 2...exectuing....")
+            }, 3000);
+        }
 
-let fun1 = ()=>{
-    console.log("function first starting.....");
-    fun2();
-    console.log("function 1 ending/......");
-};
+        let fun1 = () => {
+            console.log("function first starting.....");
+            fun2();
+            console.log("function 1 ending/......");
+        };
 
-fun1();
+        fun1();
+
+        // call back hell
+
+        const f = () => {
+            setTimeout(() => {
+                console.log("first sunction under call back hell....");
+                setTimeout(() => {
+                    console.log("second function under call back hell....");
+                    setTimeout(() => {
+                        console.log("third sunction under call back hell....");
+                    }, 3000)
+                }, 4000)
+            }, 5000)
+        }
+        f();
 
     </script>
 </body>
