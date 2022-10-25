@@ -493,6 +493,19 @@
             }
         )
 
+        // new promise 
+
+        let pro2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                let roll_no = [1,2,3,4,5];
+                resolve(roll_no);
+            },5000)
+        })
+        pro2.then(
+            (roll)=>{
+                console.log(`function called using promises.... ${roll}`)
+            }
+        );
 
     </script>
 </body>
