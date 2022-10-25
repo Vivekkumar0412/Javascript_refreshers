@@ -500,7 +500,7 @@
                 let roll_no = [1,2,3,4,5];
                 resolve(roll_no);
                 reject("Rejected by the code");
-            },5000)
+            },10000)
         });
 
         let pro3 = (fun_roll)=>{
@@ -514,21 +514,26 @@
                 },10000,fun_roll)
             })
         }
-        pro2.then(
-            (roll)=>{
-                console.log(roll)
-                return pro3(roll[0])
-            }
-        ).then(
-            (ans)=>{
-                console.log(ans);
-            }
-        )
-        .catch(
-            (error)=>{
-                console.log(error);
-            }
-        )
+        // pro2.then(
+        //     (roll)=>{
+        //         console.log(roll)
+        //         return pro3(roll[0])
+        //     }
+        // ).catch(
+        //     (error)=>{
+        //         console.log(error);
+        //     }
+        // )
+
+        async function asfn(){
+            let dta1 = await pro2;
+            console.log(dta1);
+
+            let data2 = await pro3(dta1);
+            console.log(data2);
+
+        };
+        asfn();
 
     </script>
 </body>
