@@ -498,15 +498,33 @@
         let pro2 = new Promise((resolve,reject)=>{
             setTimeout(()=>{
                 let roll_no = [1,2,3,4,5];
-                // resolve(roll_no);
+                resolve(roll_no);
                 reject("Rejected by the code");
             },5000)
-        })
+        });
+
+        let pro3 = (fun_roll)=>{
+            let hiii = new Promise((resolve,reject)=>{
+                setTimeout((fun_roll)=>{
+                    let dat = {
+                        name: "vivek",
+                        age:23
+                    };
+                    resolve(`my name is ${dat.name} and i am ${dat.age} year old my roll number is ${fun_roll}`)
+                },10000,fun_roll)
+            })
+        }
         pro2.then(
             (roll)=>{
-                console.log(`function called using promises.... ${roll}`)
+                console.log(roll)
+                return pro3(roll[0])
             }
-        ).catch(
+        ).then(
+            (ans)=>{
+                console.log(ans);
+            }
+        )
+        .catch(
             (error)=>{
                 console.log(error);
             }
