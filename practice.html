@@ -469,49 +469,49 @@
         f();
 
         let x1 = document.createElement("h1");
-        x1.setAttribute('id','h11');
-        x1.style.color  = "blue";
-        
+        x1.setAttribute('id', 'h11');
+        x1.style.color = "blue";
+
         document.body.appendChild(x1);
 
-        let probj = new Promise((myResolve,myReject)=>{
+        let probj = new Promise((myResolve, myReject) => {
             let x = 59;
 
-            if(x == 59){
+            if (x == 59) {
                 myResolve("CHAL GAYA");
-            }else{
+            } else {
                 myReject("ERROR");
             }
         });
 
         probj.then(
-            function(val){
+            function (val) {
                 x1.innerText = val;
             },
-            function(ero){
+            function (ero) {
                 x1.innerText = ero;
             }
         )
 
         // new promise 
 
-        let pro2 = new Promise((resolve,reject)=>{
-            setTimeout(()=>{
-                let roll_no = [1,2,3,4,5];
+        let pro2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let roll_no = [1, 2, 3, 4, 5];
                 resolve(roll_no);
                 reject("Rejected by the code");
-            },10000)
+            }, 3000)
         });
 
-        let pro3 = (fun_roll)=>{
-            let hiii = new Promise((resolve,reject)=>{
-                setTimeout((fun_roll)=>{
+        let pro3 = (fun_roll) => {
+            let hiii = new Promise((resolve, reject) => {
+                setTimeout((fun_roll) => {
                     let dat = {
                         name: "vivek",
-                        age:23
+                        age: 23
                     };
                     resolve(`my name is ${dat.name} and i am ${dat.age} year old my roll number is ${fun_roll}`)
-                },10000,fun_roll)
+                }, 10000, fun_roll)
             })
         }
         // pro2.then(
@@ -525,12 +525,17 @@
         //     }
         // )
 
-        async function asfn(){
-            let dta1 = await pro2;
-            console.log(dta1);
+        async function asfn() {
+            try {
+                let dta1 = await pro2;
+                console.log(dta1);
 
-            let data2 = await pro3(dta1);
-            console.log(data2);
+                let data59 = await pro3(dta1);
+                console.log(data60);
+            }catch(error){
+                console.log(`the error is ${error}`)
+            }
+            
 
         };
         asfn();
