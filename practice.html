@@ -498,14 +498,19 @@
         let pro2 = new Promise((resolve,reject)=>{
             setTimeout(()=>{
                 let roll_no = [1,2,3,4,5];
-                resolve(roll_no);
+                // resolve(roll_no);
+                reject("Rejected by the code");
             },5000)
         })
         pro2.then(
             (roll)=>{
                 console.log(`function called using promises.... ${roll}`)
             }
-        );
+        ).catch(
+            (error)=>{
+                console.log(error);
+            }
+        )
 
     </script>
 </body>
