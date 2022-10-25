@@ -477,8 +477,8 @@
         let probj = new Promise((myResolve,myReject)=>{
             let x = 59;
 
-            if(x == 9){
-                myResolve("OK")
+            if(x == 59){
+                myResolve("CHAL GAYA")
             }else{
                 myReject("ERROR")
             }
@@ -486,10 +486,10 @@
 
         probj.then(
             function(val){
-                x1.innerText = "ok";
+                x1.innerText = val;
             },
             function(ero){
-                x1.innerText = "error";
+                x1.innerText = ero;
             }
         )
 
