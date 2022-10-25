@@ -468,6 +468,31 @@
         }
         f();
 
+        let x1 = document.createElement("h1");
+        x1.setAttribute('id','h11');
+        
+        document.body.appendChild(x1);
+
+        let probj = new Promise((myResolve,myReject)=>{
+            let x = 59;
+
+            if(x == 9){
+                myResolve("OK")
+            }else{
+                myReject("ERROR")
+            }
+        });
+
+        probj.then(
+            function(val){
+                x1.innerText = "ok";
+            },
+            function(ero){
+                x1.innerText = "error";
+            }
+        )
+
+
     </script>
 </body>
 
